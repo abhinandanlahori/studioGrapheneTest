@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 
-function Card({ image, text }) {
+function CommunityCard({ image, text }) {
 
     return image ? (
         <div className="cardImg square">
@@ -39,4 +39,4 @@ function Card({ image, text }) {
     )
 }
 
-export default Card
+export default CommunityCard;

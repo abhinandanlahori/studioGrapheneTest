@@ -9,19 +9,20 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
+    
     <div className="App">
 
-    <Navigation />
-    
-    <Community />
-    
-    <Location />
-    
-    <ParallaxProvider>
-      <Menu />
-    </ParallaxProvider>
-    
-    <Recipes />
+      <Navigation />
+      
+      <Community />
+      
+      <Location />
+      
+      <ParallaxProvider>
+        <Menu />
+      </ParallaxProvider>
+      
+      <Recipes />
       
     </div>
   );

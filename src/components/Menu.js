@@ -1,6 +1,5 @@
 import React from 'react'
 import MenuCard from './MenuCard';
-import { Parallax } from 'react-scroll-parallax';
 
 function Menu() {
 
@@ -86,6 +85,8 @@ function Menu() {
         ]
     };
 
+
+
     let slideUp = [50, -10];
     let slideDown = [-50, 20];
 
@@ -93,52 +94,41 @@ function Menu() {
     return (
         <div className="menu">
 
+
                 <div className="ourMenu">
 
                     <span></span> 
 
                     <div className="lineMenu">
-
-                    <h1 className="communityMenu">OUR MENU</h1>
-
+                        <h1 className="communityMenu">OUR MENU</h1>
                     </div>
-
 
                     <p className="knowMenu">KNOW MORE</p>
 
                 </div>
 
+
             <div className="menuRow">
 
-
                 <div className="menuCol leftCol">   
-
-                        <MenuCard menu={starters} parallax1={slideUp[0]} parallax2={slideUp[1]}/>
-
+                    <MenuCard menu={starters} parallax1={slideUp[0]} parallax2={slideUp[1]}/>
                 </div>
 
         
                 <div className="menuCol">
-
-                        <MenuCard menu={main} parallax1={slideDown[0]} parallax2={slideDown[1]}/>
-
+                    <MenuCard menu={main} parallax1={slideDown[0]} parallax2={slideDown[1]}/>
                 </div>
 
 
          
                 <div className="menuCol">
-               
-                        <MenuCard menu={sides} parallax1={slideUp[0]} parallax2={slideUp[1]}/>
-            
+                    <MenuCard menu={sides} parallax1={slideUp[0]} parallax2={slideUp[1]}/>
                 </div>
 
               
                 <div className="menuCol">
-               
-                        <MenuCard menu={desserts} parallax1={slideDown[0]} parallax2={slideDown[1]}/>
-              
+                    <MenuCard menu={desserts} parallax1={slideDown[0]} parallax2={slideDown[1]}/>
                 </div>
-
 
             </div>
             

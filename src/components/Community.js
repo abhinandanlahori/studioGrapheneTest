@@ -1,67 +1,63 @@
 import React from 'react';
 import { useRef, useState, useEffect } from 'react';
-import Card from './Card';
+import CommunityCard from './CommunityCard';
 
 function Community() {
 
+  let image1 = "../picture.png";
+  let image2 = "../picture1.png";
+  let image3 = "../picture3.png";
 
-let image1 = "../picture.png";
+  let text1 = {
+    handle: "@buzzfeedfood",
+    text: "It’s taco Tuesday! These tacos from @jesseszewczyk have no added sugars and are SO good🌮 . Find the recipe from thelink in our bio! 📸 :@taylormillerphoto",
+    comments: 60,
+    likes: 14.7,
+  };
 
-let image2 = "../picture1.png";
+  let text2 = {
+    handle: "@love_food",
+    text: "Waffle sticks in Copenhagen!\n🇩🇰😍 Milk chocolate with\nsprinkles, dark chocolate with\ncoconut and milk chocolate\nwith peanuts! [📷: @foodwithmichel] #lovefood",
+    comments: 789,
+    likes: 14.7,
+  };
 
-let image3 = "../picture3.png";
-
-let text1 = {
-  handle: "@buzzfeedfood",
-  text: "It’s taco Tuesday! These tacos from @jesseszewczyk have no added sugars and are SO good🌮 . Find the recipe from thelink in our bio! 📸 :@taylormillerphoto",
-  comments: 60,
-  likes: 14.7,
-};
-
-let text2 = {
-  handle: "@love_food",
-  text: "Waffle sticks in Copenhagen!\n🇩🇰😍 Milk chocolate with\nsprinkles, dark chocolate with\ncoconut and milk chocolate\nwith peanuts! [📷: @foodwithmichel] #lovefood",
-  comments: 789,
-  likes: 14.7,
-};
-
-let text3 = {
-  handle: "@buzzfeedfood",
-  text: "Getting into long weekend\nmode like 🍤 #pancitpalabok\n(📷 @jeepneynyc)",
-  comments: 152,
-  likes: 18.2,
-};
+  let text3 = {
+    handle: "@buzzfeedfood",
+    text: "Getting into long weekend\nmode like 🍤 #pancitpalabok\n(📷 @jeepneynyc)",
+    comments: 152,
+    likes: 18.2,
+  };
 
 
 
-const ref = useRef();
-  // Call the hook passing in ref and root margin
-  // In this case it would only be considered onScreen if more ...
-  // ... than 300px of element is visible.
-const onScreen = useOnScreen(ref, "-150px");
+  const ref = useRef();
+  const onScreen = useOnScreen(ref, "-150px");
 
-const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
-useEffect(() => {
 
-  if (onScreen && (!loaded)) {
-    setLoaded(1);
-  } else if (onScreen && loaded === 1) {
-    setLoaded(2);
-  }
 
-  console.log(loaded)
-}, [onScreen])
+  useEffect(() => {
+
+    if (onScreen && (!loaded)) {
+      setLoaded(1);
+    } else if (onScreen && loaded === 1) {
+      setLoaded(2);
+    }
+
+    console.log(loaded)
+  }, [onScreen])
+
+
 
   return (
-<>
-
+    <>
       <div ref={ref} className="container">
 
         <div className="row topRow">
 
-          <div className="col "> 
-          </div>
+          <div className="col "></div>
 
           <div className="col meet">
               <h1>MEET OUR</h1>
@@ -82,21 +78,21 @@ useEffect(() => {
           
 
           
-           <div className={"col visibleCol" + (onScreen && (loaded === 1) ? " slideUp" : "")}>     {/*slideUp */}
+          <div className={"col visibleCol" + (onScreen && (loaded === 1) ? " slideUp" : "")}>     {/*slideUp */}
 
-            <img className="detail1" src="../detail02.png" />
+            <img className="detail1" src="../detail02.png" alt="detail01"/>
 
-            <Card image={image1} /> 
-
+            <CommunityCard image={image1} /> 
+            
           </div>
           
 
           
           <div ref={ref} className="col visibleCol">
 
-            <img className="detail2" src="../detail01@2x.png" />
+            <img className="detail2" src="../detail01@2x.png" alt="detail02" />
 
-            <Card text={text1}/>
+            <CommunityCard text={text1}/>
 
           </div>
           
@@ -108,21 +104,19 @@ useEffect(() => {
 
           <div className="col visibleCol ">
 
-            <img className="detail3" src="../detail03@2x.png" />
+            <img className="detail3" src="../detail03@2x.png" alt="detail03" />
 
-            <Card text={text2}/>
+            <CommunityCard text={text2}/>
 
           </div>
 
           <div className="col visibleCol ">
-            <Card image={image3} />
+            <CommunityCard image={image3} />
           </div>
 
-          <div className="col ">   
-          </div>
+          <div className="col "></div>
 
-          <div className="col ">
-          </div>
+          <div className="col "></div>
 
         </div>
         
@@ -140,18 +134,18 @@ useEffect(() => {
           </div>
 
           <div className="col visibleCol ">
-            <Card text={text3}/>
+            <CommunityCard text={text3}/>
           </div>
 
           <div className="col visibleCol ">
-            <Card image={image2} />
+            <CommunityCard image={image2} />
           </div>
 
         </div>
         
 
       </div>
-</>
+    </>
   );
 }
 
@@ -161,12 +155,10 @@ export default Community;
 
 
 function useOnScreen(ref, rootMargin = "0px") {
-  // State and setter for storing whether element is visible
   const [isIntersecting, setIntersecting] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Update our state when observer callback fires
         setIntersecting(entry.isIntersecting);
       },
       {
@@ -179,6 +171,6 @@ function useOnScreen(ref, rootMargin = "0px") {
     return () => {
       observer.unobserve(ref.current);
     };
-  }, []); // Empty array ensures that effect is only run on mount and unmount
+  }, []);
   return isIntersecting;
 }
