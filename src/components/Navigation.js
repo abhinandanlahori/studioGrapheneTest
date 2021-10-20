@@ -7,7 +7,8 @@ function Navigation() {
 
     <NavBar />
 
-    <img src="../stamp.png" alt="logo" />
+    <img id="navBackground" src="../bg-pic.png" alt="navBackground" />
+    <img id="navLogo" src="../stamp.png" alt="logo" />
 
       <div className="navText">
 
