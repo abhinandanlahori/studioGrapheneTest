@@ -55,24 +55,24 @@ body {
   justify-content: center;
   z-index: 1;
   position: absolute;
-  top: 5%;
+  top: 5.5%;
   left: 35%;
 }
 
 .navText h2 {
-  font-size: 6.8em;
+  font-size: 7.1em;
   padding-top: 0.8em;
 }
 
 .navText h1{
-  font-size: 9.5em;
+  font-size: 9.9em;
   /* height: 200px; */
   margin-top: -0.3em;
   
 }
 
 .navText h3 {
-  font-size: 3em;
+  font-size: 3.1em;
   margin-top: -0.2em;
   font-weight: bolder;
 }
@@ -90,13 +90,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 27px;
-  margin-top: 15px;;
+  font-size: 25px;
+  margin-top: 18px;;
   z-index: 12345;
+  padding: 8px 10px;
 }
 
 .logo {
-  font-size: 35px;
+  font-size: 37px;
 }
 
 .leftBar {
@@ -538,10 +539,6 @@ body {
   left: 40.6%;
 }
 
-.collaborate {
-  height: 600px;
-  background-color: #ffdac9;
-}
 
 .footer {
   height: 450px;
@@ -549,7 +546,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 40px 230px;
+  padding: 45px 200px;
 }
 
 .footerRow {
@@ -588,9 +585,9 @@ body {
 .footerLogo h3 {
   font-family: 'Myfont' ;
   color: white ;
-  font-size: 4.8em ;
+  font-size: 5.3em ;
   position: relative;
-  left: 40px;
+  left: 28px;
   top: -20px;
 }
 
@@ -605,4 +602,131 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.collaborate {
+  height: 630px;
+  background-color: #ffdac9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 150px;
+  position: relative;
+}
+
+.collaborate form {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  position: relative;
+  top: 20px;
+}
+
+.collaborate form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.collaborate form label {
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+::placeholder {
+  color:rgba(160, 160, 160, 0.692);
+}
+
+.collaborate form input {
+  background-color: #ffdac9;
+  border-width: 0 0 2px 0;
+  border-color: #333333;
+  width: 350px;
+  margin-right: 40px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  font-family: 'Myfont2';
+  font-size: 20px;
+}
+
+.collaborate form select {
+  background-color: #ffdac9;
+  border-width: 0 0 2px 0;
+  border-color: #333333;
+  margin-right: 40px;
+  padding-bottom: 15px;
+  font-family: 'Myfont2';
+  font-size: 20px;
+  color:rgba(160, 160, 160, 0.726);
+}
+
+.collaborate form button {
+  color: #ffdac9;
+  background-color: #333333;
+  position: relative;
+  top: 40px;
+  border: none;
+  width: 90px;
+  height: 45px;
+  font-size: 25px;
+  font-family: 'Myfont';
+  align-self: flex-end;
+  margin-right: 40px;
+  
+}
+
+.nameSurnameForm {
+  border-width: 0 0 3px 0 !important;
+}
+
+.collabLeftText {
+  height: 100%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.collabLeftText p {
+  font-size: 22px;
+  color:#767676;
+  font-family: 'Myfont2';
+}
+
+.collabLeftText h2 {
+  font-size: 48px;
+  position: relative;
+  top: 25px;
+}
+
+.collabLeftText h1 {
+  font-size: 85px;
+  position: relative;
+  z-index: 1;
+}
+
+.collabLeftText div {
+  position: relative;
+}
+
+.collabLeftText span {
+  background-color: #ffffff;
+  position: absolute;
+  top: 102px;
+  left: -25px;
+  height: 12px;
+  width: 270px;
+  margin: 0 !important;
+  z-index: -0.5;
+}
+
+#botLeftText {
+  margin-bottom: 110px;;
+}
+
+.collabDetail {
+  width: 188px;
+  position: absolute;
+  top: 1%;
+  left: 60%
 }
