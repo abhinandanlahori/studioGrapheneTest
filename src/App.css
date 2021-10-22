@@ -310,12 +310,7 @@ body {
    }
 }  
 
-.recipes {
-  height: 130vh;
-  background-color: rgb(255, 255, 255);
-  z-index: 1;
-  position: relative;
-}
+
 
 .menu {
   background-color: #F8F8F8;
@@ -473,13 +468,6 @@ body {
   z-index: 1234567;
 }
 
-/* .requestInfo {
-  position: relative;
-}
-
-.sideBand {
-  position: relative;
-} */
 
 .requestInfo p {
   background-color: white;
@@ -490,11 +478,9 @@ body {
   left: 30px;
 }
 
-.sideBand p {
-  transform: rotateZ(-90deg);
-  font-size: 20px;
+.sideBand img {
   position: relative;
-  right: 30px;
+  left: 30px;
 }
 
 .location {
@@ -729,4 +715,219 @@ body {
   position: absolute;
   top: 1%;
   left: 60%
+}
+
+.recipes {
+  height: 140vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 200px;
+}
+
+.rpTopText {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.rpArrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  top: 80px;
+}
+
+.rpArrows img {
+  width: 4.7%;
+  margin-left: 1.7%;
+}
+
+.rpScroll {
+  height: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rpCard {
+  height: 500px;
+  margin-right: 20px;
+  box-sizing: content-box;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.flexEnd {
+  align-self: flex-end;
+
+}
+
+
+.rpCard .rpBack {
+  width: 328px;
+}
+
+.widerImg {
+  width: 475px !important;
+}
+
+.widerImgArrow {
+  position: absolute !important;
+  top: 395px !important;
+  left: 395px !important;
+}
+
+.rpCard .rpSmallArrow {
+  width: 80px;
+  position: absolute;
+  top: 248px;
+  left: 248px;
+}
+
+#userFullName {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.rpCardText {
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 16px 30px;
+}
+
+.rpCardText h3 {
+  font-size: 30px;
+  color:#333333;
+}
+
+.rpCardText p {
+  font-size: 22px;
+  color:#767676;
+  font-family: 'MyFont2';
+}
+
+.rpCardText #difficulty {
+  color:#7676768c !important;
+  font-family: 'MyFont' !important;
+}
+
+.rpCardTop {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.048);
+}
+
+.rpTopLeft {
+  position: relative;
+}
+
+.rpTopLeft h1 {
+  font-size: 85px;
+  z-index: 1;
+}
+
+.rpTopLeft h2 {
+  color: #333333;
+  font-size: 48px;
+  position: relative;
+  top: 22px;
+}
+
+.rpTopLeft p {
+  color: #333333;
+  font-size: 25px;
+  padding: 7px 0px 7px 14px;
+  width: 90px;
+  background-color: #ffdac9;
+}
+
+.rpTopLeft span {
+  background-color: #ffdac9;;
+  position: absolute;
+  top: 103px;
+  left: -25px;
+  height: 10px;
+  width: 270px;
+  z-index: -1;
+}
+
+.rpTopRight {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.rpTopRight h2 {
+  color: #333333;
+  font-size: 48px;
+  position: relative;
+}
+
+.rpTopRight p {
+  color: #333333;
+  font-size: 25px;
+  padding: 7px 0px 7px 14px;
+  width: 130px;
+  background-color: #ffdac9;
+  align-self: flex-end;
+}
+
+.rpCardImgs p {
+  position: absolute;
+  background-color: #00000056;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  color: white;
+  padding: 5px 0;
+}
+
+.rpCardImgs span {
+  font-size: 20px !important;
+  position: relative;
+  top: -30px
+}
+
+.wideServings p {
+  position: absolute;
+  background-color: #00000056;
+  text-align: center;
+  width: 140px;
+  height: 140px;
+  font-size: 70px;
+  color: white;
+  padding: 5px 0;
+}
+
+.wideServings span {
+  font-size: 30px !important;
+  position: relative;
+  top: -40px
+}
+
+.chefChoice {
+  width: 170px;
+  position: absolute;
+  left: 160px;
+  top: -90px
+}
+
+.chefChoiceWide {
+  position: absolute;
+  left: 290px !important;
+  top: -80px !important;
+
 }

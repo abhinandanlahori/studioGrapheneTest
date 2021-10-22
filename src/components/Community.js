@@ -37,16 +37,15 @@ function Community() {
   const [loaded, setLoaded] = useState(false);
 
 
-
+  // To trigger the animation only once
   useEffect(() => {
-
+  
     if (onScreen && (!loaded)) {
       setLoaded(1);
     } else if (onScreen && loaded === 1) {
       setLoaded(2);
     }
 
-    console.log(loaded)
   }, [onScreen])
 
 

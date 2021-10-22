@@ -50,7 +50,7 @@ function NavBar() {
             <div className="middleBar">
 
                 <div className="sideBand">
-                    <p>this will be the side band</p>
+                    <img src="../left-subsection.png" alt="back" />
                 </div>
 
                 <div className="requestInfo">

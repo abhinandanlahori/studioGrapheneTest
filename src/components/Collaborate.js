@@ -35,7 +35,7 @@ function Collaborate() {
 
                         <label>EXPERIENCE</label>
                         <select>
-                            <option value="" disabled selected>Select</option>
+                            <option defaultValue="Select" >Select</option>
                         </select>
 
                     </div>
@@ -53,7 +53,7 @@ function Collaborate() {
 
                         <label>WHERE DID YOU HEAR ABOUT US?</label>
                         <select>
-                            <option value="" disabled selected>Select</option>      
+                            <option defaultValue="Select" >Select</option>      
                         </select>
 
                         <button type="submit">SEND</button>
