@@ -32,9 +32,10 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
+      "last 1 chrome version"
       "last 1 firefox version",
       "last 1 safari version"
     ]
   }
 }
+//Please check the code stability till the BrowserList and opimise the menu part and also correct the color scheme. Also check the user requirements and get in touch with the the UX Designer and confirm our update. Try to complete the task by end of the day to ensure timely delivery.
